@@ -20,7 +20,7 @@ def submit_data():
     if not data or 'type' not in data or 'text' not in data:
         return jsonify({"error": "Invalid input"}), 400
 
-    new_ticket = Ticket(type=data['type'], text=data['text'])
+    new_ticket = Tickets(type=data['type'], text=data['text'])
     db.session.add(new_ticket)
     db.session.commit()
 
