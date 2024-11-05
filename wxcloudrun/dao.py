@@ -1,13 +1,8 @@
-import logging
-
+from wxcloudrun.logger import logger
 from sqlalchemy.exc import OperationalError
 
 from wxcloudrun import db
 from wxcloudrun.model import Tickets
-
-# 初始化日志
-logger = logging.getLogger('log')
-
 
 def insert_ticket(ticket):
     """
@@ -17,6 +12,7 @@ def insert_ticket(ticket):
     try:
         db.session.add(ticket)
         db.session.commit()
+        logger.info(f"Ticket inserted successfully with no: {ticket.no}")
     except OperationalError as e:
         logger.info("insert_ticket errorMsg= {} ".format(e))
 
