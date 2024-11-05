@@ -11,7 +11,7 @@ def setup_logger():
     console_handler.setLevel(logging.INFO)
 
     # 创建日志格式
-    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    formatter = logging.Formatter('%(asctime)s - %(filename)s - %(levelname)s - %(message)s')
     console_handler.setFormatter(formatter)
 
     # 将处理器添加到日志器
