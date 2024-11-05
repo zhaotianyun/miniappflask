@@ -21,8 +21,7 @@ def submit_data():
         return jsonify({"error": "Invalid input"}), 400
 
     new_ticket = Tickets(type=data['type'], text=data['text'])
-    db.session.add(new_ticket)
-    db.session.commit()
+    insert_ticket(new_ticket)
 
     return jsonify({
         "no": new_ticket.no,
