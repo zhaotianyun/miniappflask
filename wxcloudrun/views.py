@@ -29,7 +29,6 @@ def submit_data():
 
     try:
         insert_ticket(new_ticket)
-        db.session.refresh(new_ticket)
         logger.info(f"Ticket inserted successfully with no: {new_ticket.no}")
     except SQLAlchemyError as e:
         logger.error(f"Failed to insert ticket: {str(e)}")
@@ -43,4 +42,4 @@ def submit_data():
         "update_time": new_ticket.updatetime.isoformat()
     }
     logger.info(f"Response: {response}")
-    return jsonify(response), 201
+    return jsonify(response), 200
