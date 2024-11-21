@@ -1,8 +1,8 @@
-from miniProgramBackend.utils.logger import logger
+from mpBackend.utils.logger import logger
 from sqlalchemy.exc import OperationalError
 
-from miniProgramBackend import db
-from miniProgramBackend.model.ticketsModel import Tickets
+from mpBackend import db
+from mpBackend.model.ticketsModel import Tickets
 
 def insert_ticket(ticket):
     """

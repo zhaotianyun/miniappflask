@@ -3,7 +3,7 @@ import logging
 # 配置日志
 def setup_logger():
     # 创建一个日志器
-    logger = logging.getLogger('miniProgramBackend')
+    logger = logging.getLogger('mpBackend')
     logger.setLevel(logging.INFO)  # 设置日志级别
 
     # 创建控制台处理器（StreamHandler）用于输出到控制台

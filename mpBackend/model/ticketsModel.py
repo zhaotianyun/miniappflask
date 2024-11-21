@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from miniProgramBackend import db
+from mpBackend import db
 
 
 # ticket表

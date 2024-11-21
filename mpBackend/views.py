@@ -1,9 +1,9 @@
 from datetime import datetime
 from flask import render_template, request, jsonify
 from run import app
-from miniProgramBackend.dao.ticketDao import insert_ticket, query_by_nickname
-from miniProgramBackend.model.ticketsModel import Tickets
-from miniProgramBackend.utils.logger import logger
+from mpBackend.dao.ticketDao import insert_ticket, query_by_nickname
+from mpBackend.model.ticketsModel import Tickets
+from mpBackend.utils.logger import logger
 from sqlalchemy.exc import SQLAlchemyError
 
 @app.route('/')
