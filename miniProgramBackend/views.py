@@ -1,9 +1,9 @@
 from datetime import datetime
 from flask import render_template, request, jsonify
 from run import app
-from wxcloudrun.dao import insert_ticket, query_by_nickname
-from wxcloudrun.model import Tickets
-from wxcloudrun.logger import logger  # 导入日志实例
+from miniProgramBackend.dao.ticketDao import insert_ticket, query_by_nickname
+from miniProgramBackend.model.ticketsModel import Tickets
+from miniProgramBackend.utils.logger import logger
 from sqlalchemy.exc import SQLAlchemyError
 
 @app.route('/')

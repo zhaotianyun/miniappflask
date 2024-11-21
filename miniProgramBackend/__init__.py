@@ -22,4 +22,4 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 # 加载控制器（视图函数）
-from wxcloudrun import views
+from miniProgramBackend import views

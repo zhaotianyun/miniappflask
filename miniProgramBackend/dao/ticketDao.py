@@ -1,8 +1,8 @@
-from wxcloudrun.logger import logger
+from miniProgramBackend.utils.logger import logger
 from sqlalchemy.exc import OperationalError
 
-from wxcloudrun import db
-from wxcloudrun.model import Tickets
+from miniProgramBackend import db
+from miniProgramBackend.model.ticketsModel import Tickets
 
 def insert_ticket(ticket):
     """
